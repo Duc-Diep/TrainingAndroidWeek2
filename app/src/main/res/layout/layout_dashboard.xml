@@ -42,7 +42,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.8" />
+        app:layout_constraintGuide_percent="0.85" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/v6"
@@ -56,7 +56,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.03" />
+        app:layout_constraintGuide_percent="0.04" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/h1"
@@ -98,14 +98,14 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.60" />
+        app:layout_constraintGuide_percent="0.58" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/h7"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.62" />
+        app:layout_constraintGuide_percent="0.60" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/h8"
@@ -114,10 +114,17 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.85" />
 
+    <View
+        android:layout_width="@dimen/_5sdp"
+        android:layout_height="@dimen/_5sdp"
+        android:background="@drawable/custom_status"
+        app:layout_constraintBottom_toTopOf="@id/h0"
+        app:layout_constraintLeft_toRightOf="@id/v2" />
+
     <androidx.cardview.widget.CardView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:cardCornerRadius="@dimen/_10sdp"
+        app:cardCornerRadius="@dimen/_20sdp"
         app:layout_constraintBottom_toTopOf="@id/h1"
         app:layout_constraintLeft_toRightOf="@id/v1">
 
@@ -127,12 +134,7 @@
             android:src="@drawable/bitmap_copy_2" />
     </androidx.cardview.widget.CardView>
 
-    <View
-        android:layout_width="@dimen/_5sdp"
-        android:layout_height="@dimen/_5sdp"
-        android:background="@drawable/custom_status"
-        app:layout_constraintBottom_toTopOf="@id/h0"
-        app:layout_constraintLeft_toRightOf="@id/v2" />
+
 
     <ImageView
         android:id="@+id/group"
@@ -174,7 +176,7 @@
                 android:id="@+id/imgAvatar"
                 android:layout_width="@dimen/_40sdp"
                 android:layout_height="@dimen/_40sdp"
-                app:cardCornerRadius="@dimen/_20sdp">
+                app:cardCornerRadius="@dimen/_25sdp">
 
                 <ImageView
                     android:layout_width="match_parent"
@@ -205,8 +207,9 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/tvName"
                 android:text="20,00€"
+                android:layout_marginTop="-5dp"
                 android:textColor="@color/white"
-                android:textSize="@dimen/_25sdp" />
+                android:textSize="@dimen/_24sdp" />
 
             <TextView
                 android:id="@+id/tvDetail"
@@ -220,7 +223,7 @@
                 android:paddingBottom="@dimen/_5sdp"
                 android:text="VER DETALLES"
                 android:textColor="@color/white"
-                android:textSize="@dimen/_13sdp" />
+                android:textSize="@dimen/_10sdp" />
 
             <TextView
                 android:id="@+id/tvInfor"
@@ -275,7 +278,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                app:cardCornerRadius="@dimen/_15sdp">
+                app:cardCornerRadius="@dimen/_20sdp">
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -304,7 +307,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                app:cardCornerRadius="@dimen/_15sdp">
+                app:cardCornerRadius="@dimen/_20sdp">
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -334,7 +337,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                app:cardCornerRadius="@dimen/_15sdp">
+                app:cardCornerRadius="@dimen/_20sdp">
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -363,7 +366,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                app:cardCornerRadius="@dimen/_15sdp">
+                app:cardCornerRadius="@dimen/_20sdp">
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -466,7 +469,7 @@
                     android:id="@+id/tranName2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="El corte inglés"
+                    android:text="Maria Lujan"
                     android:textSize="@dimen/_9sdp" />
 
                 <TextView
@@ -503,7 +506,7 @@
                     android:id="@+id/tranName3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="El corte inglés"
+                    android:text="Maria Lujan"
                     android:textSize="@dimen/_9sdp" />
 
                 <TextView

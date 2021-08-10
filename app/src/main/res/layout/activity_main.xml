@@ -21,8 +21,8 @@
             android:id="@+id/bottomNavigation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginRight="@dimen/_15sdp"
             app:labelVisibilityMode="labeled"
+            android:layout_marginRight="@dimen/_10sdp"
             app:menu="@menu/bottom_menu" />
     </com.google.android.material.bottomappbar.BottomAppBar>
 
