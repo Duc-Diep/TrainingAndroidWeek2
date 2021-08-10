@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/Enviar"
+        android:title="Enviar"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_assignment_returned_black_18_dp"/>
+    <item android:id="@+id/Recibir"
+        android:title="Recibir"/>
+    <item android:id="@+id/Perfil"
+        android:title="Perfil"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_shape"/>
+</menu>
