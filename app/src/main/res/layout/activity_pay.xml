@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pale_grey">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/v1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/v2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/h1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/h2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.08" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/h3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.35" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/h4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.4" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/h5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.8" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/h6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.85" />
+
+    <ImageView
+        android:id="@+id/imgBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_back"
+        app:layout_constraintBottom_toTopOf="@id/h1"
+        app:layout_constraintLeft_toRightOf="@id/v1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_2sdp"
+        android:text="Revisar y enviar"
+        android:textColor="#1b1b1b"
+        android:textSize="@dimen/_12sdp"
+        app:layout_constraintBottom_toTopOf="@id/h1"
+        app:layout_constraintLeft_toRightOf="@id/imgBack" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:elevation="@dimen/_15sdp"
+        app:cardCornerRadius="@dimen/_15sdp"
+        app:layout_constraintBottom_toTopOf="@id/h3"
+        app:layout_constraintHeight_default="spread"
+        app:layout_constraintLeft_toRightOf="@id/v1"
+        app:layout_constraintRight_toLeftOf="@id/v2"
+        app:layout_constraintTop_toBottomOf="@id/h2"
+        app:layout_constraintWidth_default="spread">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/_15sdp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvAvatar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="@dimen/_20sdp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/bitmap" />
+            </androidx.cardview.widget.CardView>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_pencil" />
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cvAvatar"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text="David Paz"
+                android:textColor="@color/black_two"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvName"
+                android:text="davidpaz@correo.com" />
+
+            <TextView
+                android:id="@+id/tvContent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:text="Este es el dinero de la entradas…" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@id/tvContent"
+                android:text="    🎬"
+                android:textColor="@color/black_two" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/tvContent"
+                android:layout_below="@id/tvEmail"
+                android:alpha="0.7"
+                android:gravity="bottom"
+                android:text="Mensaje"
+                android:textSize="@dimen/_9sdp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/button_green"
+                android:paddingLeft="@dimen/_15sdp"
+                android:paddingRight="@dimen/_15sdp"
+                android:text="20,00€"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_15sdp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:cardCornerRadius="@dimen/_15sdp"
+        app:layout_constraintBottom_toTopOf="@id/h5"
+        app:layout_constraintHeight_default="spread"
+        app:layout_constraintLeft_toRightOf="@id/v1"
+        app:layout_constraintRight_toLeftOf="@id/v2"
+        app:layout_constraintTop_toBottomOf="@id/h4"
+        app:layout_constraintWidth_default="spread">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/_10sdp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingRight="@dimen/_10sdp">
+
+                <TextView
+                    android:id="@+id/tipo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Tipo de pago "
+                    android:textColor="@color/black_two"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/arrow1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_keyboard_arrow_right" />
+
+                <TextView
+                    android:textSize="@dimen/_12sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/arrow1"
+                    android:layout_toRightOf="@id/tipo"
+                    android:gravity="right"
+                    android:text="Personal" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layerType="software"
+                android:paddingHorizontal="@dimen/_30sdp"
+                android:src="@drawable/dotted" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.3"
+                android:padding="@dimen/_10sdp">
+
+                <ImageView
+                    android:id="@+id/imgBbva"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:src="@drawable/ic_bbva" />
+
+                <TextView
+                    android:id="@+id/BBVA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_toRightOf="@id/imgBbva"
+                    android:text="BBVA"
+                    android:textColor="@color/black_two"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/BBVA"
+                    android:layout_toRightOf="@id/imgBbva"
+                    android:text="****9889" />
+
+                <ImageView
+                    android:id="@+id/arrow2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_keyboard_arrow_right" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layerType="software"
+                android:paddingHorizontal="@dimen/_30sdp"
+                android:src="@drawable/dotted" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingRight="@dimen/_10sdp">
+
+                <TextView
+                    android:id="@+id/tarifas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Tarifas por transacción"
+                    android:textColor="@color/black_two"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/fee"
+                    android:textSize="@dimen/_12sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="0,00€"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layerType="software"
+                android:paddingHorizontal="@dimen/_30sdp"
+                android:src="@drawable/dotted" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.3"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingRight="@dimen/_10sdp">
+
+                <TextView
+                    android:id="@+id/pagas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Tú pagas"
+                    android:textColor="@color/black_two"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvMoneyTransfer"
+                    android:textSize="@dimen/_13sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="20,00€"
+                    android:textColor="@color/green_blue"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_button_blue"
+        android:paddingTop="@dimen/_15sdp"
+        android:paddingBottom="@dimen/_15sdp"
+        android:text="ENVIAR AHORA"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_15sdp"
+        app:layout_constraintLeft_toRightOf="@id/v1"
+        app:layout_constraintRight_toLeftOf="@id/v2"
+        app:layout_constraintTop_toBottomOf="@id/h6" />
+</androidx.constraintlayout.widget.ConstraintLayout>

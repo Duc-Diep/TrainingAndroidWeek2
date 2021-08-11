@@ -8,7 +8,6 @@
     android:layout_height="match_parent"
     android:background="@color/pale_grey">
 
-
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/v1"
         android:layout_width="match_parent"
@@ -35,17 +34,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.65" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/v5"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
         app:layout_constraintGuide_percent="0.85" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/v6"
+        android:id="@+id/v5"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -124,7 +116,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:cardCornerRadius="@dimen/_20sdp"
+        app:cardCornerRadius="@dimen/_10sdp"
         app:layout_constraintBottom_toTopOf="@id/h1"
         app:layout_constraintLeft_toRightOf="@id/v1">
 
@@ -133,7 +125,6 @@
             android:layout_height="wrap_content"
             android:src="@drawable/bitmap_copy_2" />
     </androidx.cardview.widget.CardView>
-
 
 
     <ImageView
@@ -150,19 +141,19 @@
         android:layout_height="wrap_content"
         android:src="@drawable/settings_black_18_dp"
         app:layout_constraintBottom_toTopOf="@id/h1"
-        app:layout_constraintLeft_toRightOf="@id/v5" />
+        app:layout_constraintLeft_toRightOf="@id/v4" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cvInfor"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:elevation="@dimen/_10sdp"
-        app:cardCornerRadius="@dimen/_10sdp"
+        app:cardCornerRadius="@dimen/_20sdp"
         app:cardPreventCornerOverlap="true"
         app:layout_constraintBottom_toTopOf="@id/h3"
         app:layout_constraintHeight_default="spread"
         app:layout_constraintLeft_toRightOf="@id/v1"
-        app:layout_constraintRight_toLeftOf="@id/v6"
+        app:layout_constraintRight_toLeftOf="@id/v5"
         app:layout_constraintTop_toBottomOf="@id/h2"
         app:layout_constraintWidth_default="spread">
 
@@ -206,8 +197,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/tvName"
-                android:text="20,00€"
                 android:layout_marginTop="-5dp"
+                android:text="20,00€"
                 android:textColor="@color/white"
                 android:textSize="@dimen/_24sdp" />
 
@@ -216,6 +207,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
+
                 android:background="@drawable/stroke_white"
                 android:paddingLeft="@dimen/_10sdp"
                 android:paddingTop="@dimen/_5sdp"
@@ -264,7 +256,7 @@
         app:layout_constraintBottom_toTopOf="@id/h5"
         app:layout_constraintHeight_default="spread"
         app:layout_constraintLeft_toRightOf="@id/v1"
-        app:layout_constraintRight_toLeftOf="@id/v6"
+        app:layout_constraintRight_toLeftOf="@id/v5"
         app:layout_constraintTop_toBottomOf="@id/h4"
         app:layout_constraintWidth_default="spread">
         <!--        item1-->
@@ -278,7 +270,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                app:cardCornerRadius="@dimen/_20sdp">
+                app:cardCornerRadius="@dimen/_18sdp">
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -307,7 +299,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                app:cardCornerRadius="@dimen/_20sdp">
+                app:cardCornerRadius="@dimen/_18sdp">
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -337,7 +329,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                app:cardCornerRadius="@dimen/_20sdp">
+                app:cardCornerRadius="@dimen/_18sdp">
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -366,7 +358,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                app:cardCornerRadius="@dimen/_20sdp">
+                app:cardCornerRadius="@dimen/_18sdp">
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -390,7 +382,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Actividad"
-
         android:textColor="@color/darkish_blue"
         app:layout_constraintBottom_toTopOf="@+id/h6"
         app:layout_constraintLeft_toRightOf="@id/v1" />
@@ -402,7 +393,7 @@
         android:textColor="@color/blue"
         android:textSize="@dimen/_9sdp"
         app:layout_constraintBottom_toTopOf="@+id/h6"
-        app:layout_constraintRight_toLeftOf="@id/v6" />
+        app:layout_constraintRight_toLeftOf="@id/v5" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="0dp"
@@ -412,7 +403,7 @@
         app:layout_constraintBottom_toTopOf="@id/h8"
         app:layout_constraintHeight_default="spread"
         app:layout_constraintLeft_toRightOf="@+id/v1"
-        app:layout_constraintRight_toLeftOf="@id/v6"
+        app:layout_constraintRight_toLeftOf="@id/v5"
         app:layout_constraintTop_toBottomOf="@id/h7"
         app:layout_constraintWidth_default="spread">
 
@@ -430,6 +421,7 @@
 
                 <TextView
                     android:id="@+id/tranName1"
+                    android:textColor="@color/black_two"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="El corte inglés"
@@ -467,6 +459,7 @@
 
                 <TextView
                     android:id="@+id/tranName2"
+                    android:textColor="@color/black_two"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Maria Lujan"
@@ -504,6 +497,7 @@
 
                 <TextView
                     android:id="@+id/tranName3"
+                    android:textColor="@color/black_two"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Maria Lujan"
