@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.TrainingViewUI" parent="Theme.MaterialComponents.Light">
+    <style name="Theme.TrainingViewUI" parent="Theme.MaterialComponents.DayNight.Bridge">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
@@ -13,6 +13,7 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
         <item name="android:fontFamily">@font/montserrat_medium</item>
+
     </style>
 
 
@@ -92,10 +93,6 @@
     </style>
 <!--    layout item-->
     <style name="layout_pay_item">
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:padding="@dimen/_10sdp"
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">0dp</item>
         <item name="android:padding">@dimen/_10sdp</item>
@@ -113,10 +110,13 @@
     </style>
 <!--    card name-->
     <style name="card_name">
+        <item name="android:textSize">@dimen/_14sdp</item>
+        <item name="android:textStyle">bold</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">0dp</item>
-        <item name="android:layout_weight">1</item>
+        <item name="android:layout_weight">1.2</item>
         <item name="android:gravity">bottom</item>
+        <item name="android:paddingLeft">@dimen/_5sdp</item>
         <item name="android:textColor">@color/black_two</item>
     </style>
     <!--    card number-->
@@ -124,7 +124,17 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">0dp</item>
         <item name="android:layout_weight">1</item>
-        <item name="android:gravity">bottom</item>
-        <item name="android:textColor">@color/black_two</item>
+        <item name="android:paddingLeft">@dimen/_5sdp</item>
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="android:textColor">@color/warm_grey</item>
+        <item name="android:gravity">top</item>
+
+    </style>
+<!--    card image-->
+    <style name="card_image">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:padding">@dimen/_14sdp</item>
+        <item name="android:layout_centerInParent">true</item>
     </style>
 </resources>

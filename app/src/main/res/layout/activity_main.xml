@@ -14,7 +14,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:background="@color/white"
         app:fabCradleRoundedCornerRadius="@dimen/_50sdp">
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -22,6 +21,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:labelVisibilityMode="labeled"
+            android:background="@color/white_three"
             android:layout_marginRight="@dimen/_10sdp"
             app:menu="@menu/bottom_menu" />
     </com.google.android.material.bottomappbar.BottomAppBar>
@@ -29,7 +29,7 @@
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/border_cardview"
+        android:backgroundTint="@color/bright_blue"
         android:src="@drawable/ic_assignment_returned_black_18_dp_copy"
         app:layout_anchor="@id/bottombar" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

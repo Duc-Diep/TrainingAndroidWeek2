@@ -107,8 +107,8 @@
 
     <ImageView
         android:id="@+id/setting"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_25sdp"
         android:src="@drawable/settings_black_18_dp"
         app:layout_constraintBottom_toTopOf="@id/h1"
         app:layout_constraintLeft_toRightOf="@id/v4" />

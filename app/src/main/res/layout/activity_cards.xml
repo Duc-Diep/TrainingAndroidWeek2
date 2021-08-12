@@ -116,14 +116,13 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:elevation="@dimen/_15sdp"
-        android:scaleType="fitXY"
+        android:scaleType="fitCenter"
+        android:maxWidth="@dimen/_300sdp"
         android:src="@drawable/ic_card"
         app:layout_constraintBottom_toTopOf="@id/h3"
-        app:layout_constraintHeight_default="spread"
-        app:layout_constraintLeft_toRightOf="@id/v1"
-        app:layout_constraintRight_toLeftOf="@id/v2"
-        app:layout_constraintTop_toBottomOf="@id/h1"
-        app:layout_constraintWidth_default="spread" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/h1" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -154,12 +153,10 @@
                 <RelativeLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1.5">
+                    android:layout_weight="1.7">
 
                     <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerInParent="true"
+                        style="@style/card_image"
                         android:src="@drawable/ic_mastercard_2" />
                 </RelativeLayout>
                 <!--            part2-->
@@ -174,11 +171,8 @@
                         style="@style/card_name" />
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
                         android:text="****9889"
-                        android:textColor="@color/warm_grey" />
+                        style="@style/card_number" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -227,9 +221,7 @@
                     android:layout_weight="1.5">
 
                     <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerInParent="true"
+                        style="@style/card_image"
                         android:src="@drawable/ic_visa" />
                 </RelativeLayout>
                 <!--            part2-->
@@ -244,11 +236,8 @@
                         style="@style/card_name"  />
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
                         android:text="****9889"
-                        android:textColor="@color/warm_grey" />
+                        style="@style/card_number" />
                 </LinearLayout>
                 <!--            part3-->
                 <RelativeLayout
@@ -277,9 +266,7 @@
                 android:layout_weight="1.5">
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
+                    style="@style/card_image"
                     android:src="@drawable/ic_visa" />
             </RelativeLayout>
             <!--            part2-->
@@ -294,11 +281,8 @@
                     style="@style/card_name" />
 
                 <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
                     android:text="****9889"
-                    android:textColor="@color/warm_grey" />
+                    style="@style/card_number" />
             </LinearLayout>
             <!--            part3-->
             <RelativeLayout

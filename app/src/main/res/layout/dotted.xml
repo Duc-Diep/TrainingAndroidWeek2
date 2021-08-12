@@ -6,6 +6,5 @@
         android:layout_width="match_parent"
         android:layout_height="2dp"
         android:layerType="software"
-        android:paddingHorizontal="@dimen/_30sdp"
         android:src="@drawable/dotted" />
 </LinearLayout>
