@@ -68,8 +68,12 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/ocean_blue"
-            android:padding="@dimen/_20sdp">
+            android:padding="@dimen/_15sdp">
 
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/h01"
+                style="@style/guide_line_horizontal"
+                app:layout_constraintGuide_percent="0.2" />
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/h11"
                 style="@style/guide_line_horizontal"
@@ -78,10 +82,12 @@
             <ImageView
                 android:id="@+id/imgBackToHome"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
                 android:src="@drawable/ic_back_grey"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/h01"
+                />
 
             <TextView
                 android:id="@+id/Cuentas"
