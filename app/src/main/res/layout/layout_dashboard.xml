@@ -1,109 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
-
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/pale_grey">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/v1"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
+        style="@style/guide_line_vertical"
         app:layout_constraintGuide_percent="0.05" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/v2"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
+        style="@style/guide_line_vertical"
         app:layout_constraintGuide_percent="0.12" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/v3"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
+        style="@style/guide_line_vertical"
         app:layout_constraintGuide_percent="0.35" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/v4"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
+        style="@style/guide_line_vertical"
         app:layout_constraintGuide_percent="0.85" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/v5"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
+        style="@style/guide_line_vertical"
         app:layout_constraintGuide_percent="0.95" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/h0"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
+        style="@style/guide_line_horizontal"
         app:layout_constraintGuide_percent="0.04" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/h1"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
+        style="@style/guide_line_horizontal"
         app:layout_constraintGuide_percent="0.08" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/h2"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
+        style="@style/guide_line_horizontal"
         app:layout_constraintGuide_percent="0.11" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/h3"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
+        style="@style/guide_line_horizontal"
         app:layout_constraintGuide_percent="0.38" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/h4"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
+        style="@style/guide_line_horizontal"
         app:layout_constraintGuide_percent="0.43" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/h5"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
+        style="@style/guide_line_horizontal"
         app:layout_constraintGuide_percent="0.55" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/h6"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
+        style="@style/guide_line_horizontal"
         app:layout_constraintGuide_percent="0.58" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/h7"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
+        style="@style/guide_line_horizontal"
         app:layout_constraintGuide_percent="0.60" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/h8"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
+        style="@style/guide_line_horizontal"
         app:layout_constraintGuide_percent="0.85" />
 
     <View
@@ -207,7 +177,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
-
                 android:background="@drawable/stroke_white"
                 android:paddingLeft="@dimen/_10sdp"
                 android:paddingTop="@dimen/_5sdp"
@@ -267,10 +236,7 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/imgAvatarItem1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                app:cardCornerRadius="@dimen/_18sdp">
+                style="@style/circle_image_item">
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -280,13 +246,9 @@
 
             <TextView
                 android:id="@+id/tvNameItem1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/username_item"
                 android:layout_below="@id/imgAvatarItem1"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="@dimen/_2sdp"
-                android:text="Carlos Roca"
-                android:textSize="@dimen/_9sdp" />
+                android:text="Carlos Roca" />
         </RelativeLayout>
         <!--        item2-->
         <RelativeLayout
@@ -296,10 +258,7 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/imgAvatarItem2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                app:cardCornerRadius="@dimen/_18sdp">
+                style="@style/circle_image_item">
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -309,14 +268,9 @@
 
             <TextView
                 android:id="@+id/tvNameItem2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/username_item"
                 android:layout_below="@id/imgAvatarItem2"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="@dimen/_2sdp"
-                android:src="@drawable/bitmap_copy"
-                android:text="Ruby Sanz"
-                android:textSize="@dimen/_9sdp" />
+                android:text="Ruby Sanz" />
         </RelativeLayout>
         <!--        item3-->
         <RelativeLayout
@@ -326,10 +280,7 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/imgAvatarItem3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                app:cardCornerRadius="@dimen/_18sdp">
+                style="@style/circle_image_item">
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -339,13 +290,9 @@
 
             <TextView
                 android:id="@+id/tvNameItem3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/username_item"
                 android:layout_below="@id/imgAvatarItem3"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="@dimen/_2sdp"
-                android:text="Mary Rich"
-                android:textSize="@dimen/_9sdp" />
+                android:text="Mary Rich" />
         </RelativeLayout>
         <!--        item4-->
         <RelativeLayout
@@ -355,10 +302,7 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/imgAvatarItem4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                app:cardCornerRadius="@dimen/_18sdp">
+                style="@style/circle_image_item">
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -368,13 +312,9 @@
 
             <TextView
                 android:id="@+id/tvNameItem4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/username_item"
                 android:layout_below="@id/imgAvatarItem4"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="@dimen/_2sdp"
-                android:text="José Porto"
-                android:textSize="@dimen/_9sdp" />
+                android:text="José Porto" />
         </RelativeLayout>
     </LinearLayout>
 
@@ -389,9 +329,9 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ver más movimientos"
         android:textColor="@color/blue"
         android:textSize="@dimen/_9sdp"
+        android:text="Ver más movimientos"
         app:layout_constraintBottom_toTopOf="@+id/h6"
         app:layout_constraintRight_toLeftOf="@id/v5" />
 
@@ -413,111 +353,68 @@
             android:orientation="vertical"
             android:padding="@dimen/_10sdp">
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:padding="@dimen/_5sdp">
+            <RelativeLayout style="@style/layout_transaction">
 
                 <TextView
                     android:id="@+id/tranName1"
-                    android:textColor="@color/black_two"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="El corte inglés"
-                    android:textSize="@dimen/_9sdp" />
+                    style="@style/title_transaction"
+                    android:text="El corte inglés" />
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/sub_title_transaction"
                     android:layout_below="@id/tranName1"
-                    android:text="Pago aceptado"
-                    android:textSize="@dimen/_8sdp" />
+                    android:text="Pago aceptado" />
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:text="-50€"
-                    android:textSize="@dimen/_12sdp" />
+                    style="@style/price_transaction"
+                    android:text="-50€" />
 
             </RelativeLayout>
 
-            <ImageView
+            <include
+                layout="@layout/dotted"
                 android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:layerType="software"
-                android:paddingHorizontal="@dimen/_30sdp"
-                android:src="@drawable/dotted" />
+                android:layout_height="2dp" />
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:padding="@dimen/_5sdp">
+            <RelativeLayout style="@style/layout_transaction">
 
                 <TextView
                     android:id="@+id/tranName2"
-                    android:textColor="@color/black_two"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Maria Lujan"
-                    android:textSize="@dimen/_9sdp" />
+                    style="@style/title_transaction"
+                    android:text="Maria Lujan" />
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/sub_title_transaction"
                     android:layout_below="@id/tranName2"
-                    android:text="Pago aceptado"
-                    android:textSize="@dimen/_8sdp" />
+                    android:text="Pago aceptado" />
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
+                    style="@style/price_transaction"
                     android:text="650€"
-                    android:textColor="#00c55b"
-                    android:textSize="@dimen/_12sdp" />
+                    android:textColor="#00c55b" />
             </RelativeLayout>
 
-            <ImageView
+            <include
+                layout="@layout/dotted"
                 android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:layerType="software"
-                android:paddingHorizontal="@dimen/_30sdp"
-                android:src="@drawable/dotted" />
+                android:layout_height="2dp" />
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:padding="@dimen/_5sdp">
+            <RelativeLayout style="@style/layout_transaction">
 
                 <TextView
                     android:id="@+id/tranName3"
-                    android:textColor="@color/black_two"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Maria Lujan"
-                    android:textSize="@dimen/_9sdp" />
+                    style="@style/title_transaction"
+                    android:text="Maria Lujan" />
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/sub_title_transaction"
                     android:layout_below="@id/tranName3"
-                    android:text="Pago aceptado"
-                    android:textSize="@dimen/_8sdp" />
+                    android:text="Pago aceptado" />
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
+                    style="@style/price_transaction"
                     android:text="250€"
-                    android:textColor="#00c55b"
-                    android:textSize="@dimen/_12sdp" />
+                    android:textColor="#00c55b" />
             </RelativeLayout>
         </LinearLayout>
     </androidx.cardview.widget.CardView>

@@ -7,59 +7,45 @@
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/v1"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
+        style="@style/guide_line_vertical"
         app:layout_constraintGuide_percent="0.05" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/v2"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
+        style="@style/guide_line_vertical"
         app:layout_constraintGuide_percent="0.95" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/h1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        style="@style/guide_line_horizontal"
         app:layout_constraintGuide_percent="0.2" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/h2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        style="@style/guide_line_horizontal"
         app:layout_constraintGuide_percent="0.33" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/h3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        style="@style/guide_line_horizontal"
         app:layout_constraintGuide_percent="0.45" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/h4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        style="@style/guide_line_horizontal"
         app:layout_constraintGuide_percent="0.5" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/h5"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        style="@style/guide_line_horizontal"
         app:layout_constraintGuide_percent="0.9" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:cardCornerRadius="@dimen/_15sdp"
-        app:layout_constraintRight_toLeftOf="@id/v2"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/v2"
         app:layout_constraintTop_toBottomOf="@id/h5">
 
         <ImageView
@@ -86,9 +72,7 @@
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/h11"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
+                style="@style/guide_line_horizontal"
                 app:layout_constraintGuide_percent="0.6" />
 
             <ImageView
@@ -146,21 +130,140 @@
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:orientation="vertical"
         android:background="@color/white"
+        android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@id/h5"
         app:layout_constraintLeft_toRightOf="@+id/v1"
         app:layout_constraintRight_toLeftOf="@id/v2"
         app:layout_constraintTop_toBottomOf="@id/h4">
         <!--        item1-->
-        // Thay mỗi item thành CardView
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:background="@color/white_three"
-            android:layout_marginTop="@dimen/_5sdp"
-            android:layout_marginBottom="@dimen/_5sdp"
-            android:layout_weight="1">
+        <androidx.cardview.widget.CardView
+            style="@style/card_item">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white_three">
+                <!--            part1-->
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_mastercard_2" />
+                </RelativeLayout>
+                <!--            part2-->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2.5"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:text="Mastercard"
+                        style="@style/card_name" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="****9889"
+                        android:textColor="@color/warm_grey" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/darkish_blue"
+                        android:padding="@dimen/_5sdp"
+                        android:src="@drawable/ic_create_black_18_dp_2" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/blue"
+                        android:padding="@dimen/_5sdp"
+                        android:src="@drawable/ic_delete_outline_black_18_dp" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/bright_blue"
+                        android:padding="@dimen/_10sdp"
+                        android:src="@drawable/ic_path" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <!--        item2-->
+        <androidx.cardview.widget.CardView
+            style="@style/card_item">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!--            part1-->
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_visa" />
+                </RelativeLayout>
+                <!--            part2-->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:text="Visa black"
+                        style="@style/card_name"  />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="****9889"
+                        android:textColor="@color/warm_grey" />
+                </LinearLayout>
+                <!--            part3-->
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_more_vert_black_18_dp" />
+                </RelativeLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <!--        item3-->
+        <androidx.cardview.widget.CardView
+            style="@style/card_item">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
             <!--            part1-->
             <RelativeLayout
                 android:layout_width="0dp"
@@ -171,94 +274,18 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
-                    android:src="@drawable/ic_mastercard_2" />
+                    android:src="@drawable/ic_visa" />
             </RelativeLayout>
             <!--            part2-->
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="2.5"
+                android:layout_weight="3"
                 android:orientation="vertical">
 
                 <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:gravity="bottom"
-                    android:text="Mastercard"
-                    android:textColor="@color/black_two" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:text="****9889"
-                    android:textColor="@color/warm_grey" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="2">
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@color/darkish_blue"
-                    android:padding="@dimen/_5sdp"
-                    android:src="@drawable/ic_create_black_18_dp_2" />
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@color/blue"
-                    android:padding="@dimen/_5sdp"
-                    android:src="@drawable/ic_delete_outline_black_18_dp" />
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@color/bright_blue"
-                    android:padding="@dimen/_10sdp"
-                    android:src="@drawable/ic_path" />
-            </LinearLayout>
-        </LinearLayout>
-        <!--        item2-->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:background="@color/white_three"
-            android:layout_marginTop="@dimen/_5sdp"
-            android:layout_marginBottom="@dimen/_5sdp"
-            android:layout_height="0dp"
-            android:layout_weight="1">
-            <!--            part1-->
-            <RelativeLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1.5">
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:src="@drawable/ic_visa" />
-            </RelativeLayout>
-            <!--            part2-->
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="3">
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_centerVertical="true"
-                    android:layout_weight="1"
-                    android:gravity="bottom"
                     android:text="Visa black"
-                    android:textColor="@color/black_two" />
+                    style="@style/card_name" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -272,66 +299,15 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1">
-                <ImageView
-                    android:src="@drawable/ic_more_vert_black_18_dp"
-                    android:layout_centerInParent="true"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-            </RelativeLayout>
-        </LinearLayout>
-        <!--        item3-->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:background="@color/white_three"
-            android:layout_marginTop="@dimen/_5sdp"
-            android:layout_marginBottom="@dimen/_5sdp"
-            android:layout_height="0dp"
-            android:layout_weight="1">
-            <!--            part1-->
-            <RelativeLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1.5">
+
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
-                    android:src="@drawable/ic_visa" />
+                    android:src="@drawable/ic_more_vert_black_18_dp" />
             </RelativeLayout>
-            <!--            part2-->
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="3">
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_centerVertical="true"
-                    android:layout_weight="1"
-                    android:gravity="bottom"
-                    android:text="Visa black"
-                    android:textColor="@color/black_two" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:text="****9889"
-                    android:textColor="@color/warm_grey" />
             </LinearLayout>
-            <!--            part3-->
-            <RelativeLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1">
-                <ImageView
-                    android:src="@drawable/ic_more_vert_black_18_dp"
-                    android:layout_centerInParent="true"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-            </RelativeLayout>
-        </LinearLayout>
+        </androidx.cardview.widget.CardView>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,58 +7,42 @@
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/v1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
+        style="@style/guide_line_vertical"
         app:layout_constraintGuide_percent="0.05" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/v2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
+        style="@style/guide_line_vertical"
         app:layout_constraintGuide_percent="0.95" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/h1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        style="@style/guide_line_horizontal"
         app:layout_constraintGuide_percent="0.05" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/h2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        style="@style/guide_line_horizontal"
         app:layout_constraintGuide_percent="0.08" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/h3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        style="@style/guide_line_horizontal"
         app:layout_constraintGuide_percent="0.35" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/h4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        style="@style/guide_line_horizontal"
         app:layout_constraintGuide_percent="0.4" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/h5"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        style="@style/guide_line_horizontal"
         app:layout_constraintGuide_percent="0.8" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/h6"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        style="@style/guide_line_horizontal"
         app:layout_constraintGuide_percent="0.85" />
 
     <ImageView
@@ -190,21 +174,13 @@
             android:padding="@dimen/_10sdp">
 
             <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:paddingLeft="@dimen/_10sdp"
-                android:paddingRight="@dimen/_10sdp">
+                style="@style/layout_pay_item"
+                android:layout_weight="1">
 
                 <TextView
                     android:id="@+id/tipo"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
                     android:text="Tipo de pago "
-                    android:textColor="@color/black_two"
-                    android:textSize="@dimen/_12sdp"
-                    android:textStyle="bold" />
+                    style="@style/title_pay" />
 
                 <ImageView
                     android:id="@+id/arrow1"
@@ -215,28 +191,21 @@
                     android:src="@drawable/ic_keyboard_arrow_right" />
 
                 <TextView
-                    android:textSize="@dimen/_12sdp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
+                    style="@style/info_pay"
                     android:layout_toLeftOf="@id/arrow1"
                     android:layout_toRightOf="@id/tipo"
                     android:gravity="right"
                     android:text="Personal" />
             </RelativeLayout>
 
-            <ImageView
+            <include
+                layout="@layout/dotted"
                 android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:layerType="software"
-                android:paddingHorizontal="@dimen/_30sdp"
-                android:src="@drawable/dotted" />
+                android:layout_height="2dp" />
 
             <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1.3"
-                android:padding="@dimen/_10sdp">
+                style="@style/layout_pay_item"
+                android:layout_weight="1.3">
 
                 <ImageView
                     android:id="@+id/imgBbva"
@@ -249,7 +218,7 @@
                     android:id="@+id/BBVA"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
                     android:layout_toRightOf="@id/imgBbva"
                     android:text="BBVA"
                     android:textColor="@color/black_two"
@@ -272,75 +241,50 @@
                     android:src="@drawable/ic_keyboard_arrow_right" />
             </RelativeLayout>
 
-            <ImageView
+            <include
+                layout="@layout/dotted"
                 android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:layerType="software"
-                android:paddingHorizontal="@dimen/_30sdp"
-                android:src="@drawable/dotted" />
+                android:layout_height="2dp" />
 
             <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:paddingLeft="@dimen/_10sdp"
-                android:paddingRight="@dimen/_10sdp">
+                style="@style/layout_pay_item"
+                android:layout_weight="1">
 
                 <TextView
                     android:id="@+id/tarifas"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
                     android:text="Tarifas por transacción"
-                    android:textColor="@color/black_two"
-                    android:textSize="@dimen/_12sdp"
-                    android:textStyle="bold" />
+                    style="@style/title_pay" />
 
                 <TextView
                     android:id="@+id/fee"
-                    android:textSize="@dimen/_12sdp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
                     android:text="0,00€"
-                    android:textStyle="bold" />
+                    style="@style/info_pay"
+                     />
             </RelativeLayout>
 
-            <ImageView
+            <include
+                layout="@layout/dotted"
                 android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:layerType="software"
-                android:paddingHorizontal="@dimen/_30sdp"
-                android:src="@drawable/dotted" />
+                android:layout_height="2dp" />
 
             <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1.3"
-                android:paddingLeft="@dimen/_10sdp"
-                android:paddingRight="@dimen/_10sdp">
+                style="@style/layout_pay_item"
+                android:layout_weight="1.3">
 
                 <TextView
                     android:id="@+id/pagas"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
                     android:text="Tú pagas"
-                    android:textColor="@color/black_two"
-                    android:textSize="@dimen/_12sdp"
-                    android:textStyle="bold" />
+                    style="@style/title_pay" />
 
                 <TextView
                     android:id="@+id/tvMoneyTransfer"
+                    style="@style/info_pay"
                     android:textSize="@dimen/_13sdp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
                     android:text="20,00€"
                     android:textColor="@color/green_blue"
-                    android:textStyle="bold" />
+                    />
             </RelativeLayout>
         </LinearLayout>
     </androidx.cardview.widget.CardView>

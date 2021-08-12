@@ -14,4 +14,117 @@
         <!-- Customize your theme here. -->
         <item name="android:fontFamily">@font/montserrat_medium</item>
     </style>
+
+
+<!--    guilde line vertical and horizontal-->
+    <style name="guide_line_vertical">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+    <style name="guide_line_horizontal">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+<!--    Dashboard-->
+<!--    circle image-->
+    <style name="circle_image_item">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="cardCornerRadius">@dimen/_18sdp</item>
+    </style>
+<!--    username of circle image-->
+    <style name="username_item">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_marginTop">@dimen/_2sdp</item>
+        <item name="android:textSize">@dimen/_9sdp</item>
+    </style>
+<!--    item transaction-->
+<!--    layout-->
+    <style name="layout_transaction">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:padding">@dimen/_5sdp</item>
+    </style>
+<!--    title-->
+    <style name="title_transaction">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/black_two</item>
+        <item name="android:textSize">@dimen/_9sdp</item>
+    </style>
+<!--    subtitle-->
+    <style name="sub_title_transaction">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/_8sdp</item>
+    </style>
+<!--    price-->
+    <style name="price_transaction">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+<!--    item in activity_pay-->
+<!--    title-->
+    <style name="title_pay">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/black_two</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+<!--    money-->
+    <style name="info_pay">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/_11sdp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+<!--    layout item-->
+    <style name="layout_pay_item">
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="@dimen/_10sdp"
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:padding">@dimen/_10sdp</item>
+    </style>
+<!--    Cards-->
+    <!--    card_item   -->
+    <style name="card_item">
+        <item name="cardCornerRadius">@dimen/_10sdp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_marginTop">@dimen/_5sdp</item>
+        <item name="android:layout_marginBottom">@dimen/_5sdp</item>
+        <item name="background">@color/white_three</item>
+    </style>
+<!--    card name-->
+    <style name="card_name">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">bottom</item>
+        <item name="android:textColor">@color/black_two</item>
+    </style>
+    <!--    card number-->
+    <style name="card_number">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">bottom</item>
+        <item name="android:textColor">@color/black_two</item>
+    </style>
 </resources>
