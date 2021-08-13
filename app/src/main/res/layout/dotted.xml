@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
     <ImageView
+        android:paddingHorizontal="@dimen/_5sdp"
         android:layout_width="match_parent"
         android:layout_height="2dp"
         android:layerType="software"

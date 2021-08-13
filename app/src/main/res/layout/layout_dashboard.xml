@@ -1,422 +1,361 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:background="@color/pale_grey">
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/v1"
-        style="@style/guide_line_vertical"
-        app:layout_constraintGuide_percent="0.05" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/v2"
-        style="@style/guide_line_vertical"
-        app:layout_constraintGuide_percent="0.12" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/v3"
-        style="@style/guide_line_vertical"
-        app:layout_constraintGuide_percent="0.35" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/v4"
-        style="@style/guide_line_vertical"
-        app:layout_constraintGuide_percent="0.85" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/v5"
-        style="@style/guide_line_vertical"
-        app:layout_constraintGuide_percent="0.95" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/h0"
-        style="@style/guide_line_horizontal"
-        app:layout_constraintGuide_percent="0.04" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/h1"
-        style="@style/guide_line_horizontal"
-        app:layout_constraintGuide_percent="0.08" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/h2"
-        style="@style/guide_line_horizontal"
-        app:layout_constraintGuide_percent="0.11" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/h3"
-        style="@style/guide_line_horizontal"
-        app:layout_constraintGuide_percent="0.38" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/h4"
-        style="@style/guide_line_horizontal"
-        app:layout_constraintGuide_percent="0.43" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/h5"
-        style="@style/guide_line_horizontal"
-        app:layout_constraintGuide_percent="0.55" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/h6"
-        style="@style/guide_line_horizontal"
-        app:layout_constraintGuide_percent="0.58" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/h7"
-        style="@style/guide_line_horizontal"
-        app:layout_constraintGuide_percent="0.60" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/h8"
-        style="@style/guide_line_horizontal"
-        app:layout_constraintGuide_percent="0.85" />
-
-    <View
-        android:layout_width="@dimen/_5sdp"
-        android:layout_height="@dimen/_5sdp"
-        android:background="@drawable/custom_status"
-        app:layout_constraintBottom_toTopOf="@id/h0"
-        app:layout_constraintLeft_toRightOf="@id/v2" />
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardCornerRadius="@dimen/_10sdp"
-        app:layout_constraintBottom_toTopOf="@id/h1"
-        app:layout_constraintLeft_toRightOf="@id/v1">
-
-        <ImageView
+        android:paddingLeft="@dimen/_15sdp"
+        android:paddingRight="@dimen/_15sdp"
+        android:paddingTop="@dimen/_15sdp"
+        android:paddingBottom="@dimen/_60sdp">
+        <androidx.cardview.widget.CardView
+            android:id="@+id/imgAvt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/bitmap_copy_2" />
-    </androidx.cardview.widget.CardView>
+            app:cardCornerRadius="@dimen/_10sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent">
 
-
-    <ImageView
-        android:id="@+id/group"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/group"
-        app:layout_constraintBottom_toTopOf="@id/h1"
-        app:layout_constraintLeft_toRightOf="@id/v3" />
-
-    <ImageView
-        android:id="@+id/setting"
-        android:layout_width="@dimen/_25sdp"
-        android:layout_height="@dimen/_25sdp"
-        android:src="@drawable/settings_black_18_dp"
-        app:layout_constraintBottom_toTopOf="@id/h1"
-        app:layout_constraintLeft_toRightOf="@id/v4" />
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cvInfor"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:elevation="@dimen/_10sdp"
-        app:cardCornerRadius="@dimen/_20sdp"
-        app:cardPreventCornerOverlap="true"
-        app:layout_constraintBottom_toTopOf="@id/h3"
-        app:layout_constraintHeight_default="spread"
-        app:layout_constraintLeft_toRightOf="@id/v1"
-        app:layout_constraintRight_toLeftOf="@id/v5"
-        app:layout_constraintTop_toBottomOf="@id/h2"
-        app:layout_constraintWidth_default="spread">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/border_cardview"
-            android:padding="@dimen/_15sdp">
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/imgAvatar"
-                android:layout_width="@dimen/_40sdp"
-                android:layout_height="@dimen/_40sdp"
-                app:cardCornerRadius="@dimen/_25sdp">
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/bitmap_copy_2" />
-            </androidx.cardview.widget.CardView>
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:layout_width="@dimen/_60sdp"
-                android:layout_height="@dimen/_25sdp"
-                android:layout_alignParentRight="true"
-                android:background="@drawable/border_button"
-                android:text="HOY"
-                android:textColor="@color/black"
-                android:textSize="@dimen/_10sdp" />
-
-            <TextView
-                android:id="@+id/tvName"
+            <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/imgAvatar"
-                android:text="Nina te ha enviado"
-                android:textColor="@color/white" />
+                android:src="@drawable/bitmap_copy_2" />
+        </androidx.cardview.widget.CardView>
+        <View
+            android:layout_width="@dimen/_5sdp"
+            android:layout_height="@dimen/_5sdp"
+            android:background="@drawable/custom_status"
+            app:layout_constraintTop_toTopOf="@id/imgAvt"
+            app:layout_constraintLeft_toRightOf="@id/imgAvt" />
 
-            <TextView
-                android:id="@+id/tvMoney"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/tvName"
-                android:layout_marginTop="-5dp"
-                android:text="20,00€"
-                android:textColor="@color/white"
-                android:textSize="@dimen/_24sdp" />
+        <ImageView
+            android:id="@+id/group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/group"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
 
-            <TextView
-                android:id="@+id/tvDetail"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:background="@drawable/stroke_white"
-                android:paddingLeft="@dimen/_10sdp"
-                android:paddingTop="@dimen/_5sdp"
-                android:paddingRight="@dimen/_10sdp"
-                android:paddingBottom="@dimen/_5sdp"
-                android:text="VER DETALLES"
-                android:textColor="@color/white"
-                android:textSize="@dimen/_10sdp" />
+        <ImageView
+            android:id="@+id/setting"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:src="@drawable/settings_black_18_dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
 
-            <TextView
-                android:id="@+id/tvInfor"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginRight="@dimen/_10sdp"
-                android:text="Por la cena... 🍕"
-                android:textColor="@color/white" />
-
-            <TextView
-                android:id="@+id/tvMensaje"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_above="@id/tvInfor"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="@dimen/_47sdp"
-                android:alpha="0.5"
-                android:text="Mensaje"
-                android:textColor="@color/white" />
-        </RelativeLayout>
-
-    </androidx.cardview.widget.CardView>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Enviar de nuevo"
-        android:textColor="@color/darkish_blue"
-        app:layout_constraintBottom_toTopOf="@+id/h4"
-        app:layout_constraintLeft_toRightOf="@id/v1" />
-
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="@dimen/_5sdp"
-        app:layout_constraintBottom_toTopOf="@id/h5"
-        app:layout_constraintHeight_default="spread"
-        app:layout_constraintLeft_toRightOf="@id/v1"
-        app:layout_constraintRight_toLeftOf="@id/v5"
-        app:layout_constraintTop_toBottomOf="@id/h4"
-        app:layout_constraintWidth_default="spread">
-        <!--        item1-->
-        <RelativeLayout
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvInfor"
             android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1">
+            android:layout_height="@dimen/_150sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:elevation="@dimen/_10sdp"
+            app:cardCornerRadius="@dimen/_20sdp"
+            app:cardPreventCornerOverlap="true"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/group">
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/imgAvatarItem1"
-                style="@style/circle_image_item">
+            <RelativeLayout
 
-                <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/border_cardview"
+                android:padding="@dimen/_15sdp">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/imgAvatar"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    app:cardCornerRadius="@dimen/_25sdp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/bitmap_copy_2" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="@dimen/_60sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/border_button"
+                    android:text="HOY"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_10sdp" />
+
+                <TextView
+                    android:id="@+id/tvName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/bitmap_copy" />
-            </androidx.cardview.widget.CardView>
+                    android:layout_below="@id/imgAvatar"
+                    android:text="Nina te ha enviado"
+                    android:textColor="@color/white" />
 
-            <TextView
-                android:id="@+id/tvNameItem1"
-                style="@style/username_item"
-                android:layout_below="@id/imgAvatarItem1"
-                android:text="Carlos Roca" />
-        </RelativeLayout>
-        <!--        item2-->
-        <RelativeLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1">
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/imgAvatarItem2"
-                style="@style/circle_image_item">
-
-                <ImageView
+                <TextView
+                    android:id="@+id/tvMoney"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/bitmap_copy_3" />
-            </androidx.cardview.widget.CardView>
+                    android:layout_below="@id/tvName"
+                    android:layout_marginTop="-5dp"
+                    android:text="20,00€"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_24sdp" />
 
-            <TextView
-                android:id="@+id/tvNameItem2"
-                style="@style/username_item"
-                android:layout_below="@id/imgAvatarItem2"
-                android:text="Ruby Sanz" />
-        </RelativeLayout>
-        <!--        item3-->
-        <RelativeLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1">
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/imgAvatarItem3"
-                style="@style/circle_image_item">
-
-                <ImageView
+                <TextView
+                    android:id="@+id/tvDetail"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/bitmap_copy_4" />
-            </androidx.cardview.widget.CardView>
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/stroke_white"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingRight="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:text="VER DETALLES"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_10sdp" />
 
-            <TextView
-                android:id="@+id/tvNameItem3"
-                style="@style/username_item"
-                android:layout_below="@id/imgAvatarItem3"
-                android:text="Mary Rich" />
-        </RelativeLayout>
-        <!--        item4-->
-        <RelativeLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1">
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/imgAvatarItem4"
-                style="@style/circle_image_item">
-
-                <ImageView
+                <TextView
+                    android:id="@+id/tvInfor"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/bitmap_copy_5" />
-            </androidx.cardview.widget.CardView>
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:text="Por la cena... 🍕"
+                    android:textColor="@color/white" />
 
-            <TextView
-                android:id="@+id/tvNameItem4"
-                style="@style/username_item"
-                android:layout_below="@id/imgAvatarItem4"
-                android:text="José Porto" />
-        </RelativeLayout>
-    </LinearLayout>
+                <TextView
+                    android:id="@+id/tvMensaje"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/tvInfor"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/_40sdp"
+                    android:alpha="0.5"
+                    android:text="Mensaje"
+                    android:textColor="@color/white" />
+            </RelativeLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Actividad"
-        android:textColor="@color/darkish_blue"
-        app:layout_constraintBottom_toTopOf="@+id/h6"
-        app:layout_constraintLeft_toRightOf="@id/v1" />
+        </androidx.cardview.widget.CardView>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/blue"
-        android:textSize="@dimen/_9sdp"
-        android:text="Ver más movimientos"
-        app:layout_constraintBottom_toTopOf="@+id/h6"
-        app:layout_constraintRight_toLeftOf="@id/v5" />
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:elevation="@dimen/_10sdp"
-        app:cardCornerRadius="@dimen/_10sdp"
-        app:layout_constraintBottom_toTopOf="@id/h8"
-        app:layout_constraintHeight_default="spread"
-        app:layout_constraintLeft_toRightOf="@+id/v1"
-        app:layout_constraintRight_toLeftOf="@id/v5"
-        app:layout_constraintTop_toBottomOf="@id/h7"
-        app:layout_constraintWidth_default="spread">
+        <TextView
+            android:id="@+id/tvEnviar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enviar de nuevo"
+            android:textSize="@dimen/_11sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:textColor="@color/darkish_blue"
+            app:layout_constraintTop_toBottomOf="@id/cvInfor"
+            app:layout_constraintLeft_toLeftOf="parent" />
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:padding="@dimen/_10sdp">
+            android:id="@+id/layout_list_user"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvEnviar"
+            app:layout_constraintWidth_default="spread">
+            <!--        item1-->
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
 
-            <RelativeLayout style="@style/layout_transaction">
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/imgAvatarItem1"
+                    style="@style/circle_image_item">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/bitmap_copy" />
+                </androidx.cardview.widget.CardView>
 
                 <TextView
-                    android:id="@+id/tranName1"
-                    style="@style/title_transaction"
-                    android:text="El corte inglés" />
-
-                <TextView
-                    style="@style/sub_title_transaction"
-                    android:layout_below="@id/tranName1"
-                    android:text="Pago aceptado" />
-
-                <TextView
-                    style="@style/price_transaction"
-                    android:text="-50€" />
-
+                    android:id="@+id/tvNameItem1"
+                    style="@style/username_item"
+                    android:layout_below="@id/imgAvatarItem1"
+                    android:text="Carlos Roca" />
             </RelativeLayout>
+            <!--        item2-->
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
 
-            <include
-                layout="@layout/dotted"
-                android:layout_width="match_parent"
-                android:layout_height="2dp" />
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/imgAvatarItem2"
+                    style="@style/circle_image_item">
 
-            <RelativeLayout style="@style/layout_transaction">
-
-                <TextView
-                    android:id="@+id/tranName2"
-                    style="@style/title_transaction"
-                    android:text="Maria Lujan" />
-
-                <TextView
-                    style="@style/sub_title_transaction"
-                    android:layout_below="@id/tranName2"
-                    android:text="Pago aceptado" />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/bitmap_copy_3" />
+                </androidx.cardview.widget.CardView>
 
                 <TextView
-                    style="@style/price_transaction"
-                    android:text="650€"
-                    android:textColor="#00c55b" />
+                    android:id="@+id/tvNameItem2"
+                    style="@style/username_item"
+                    android:layout_below="@id/imgAvatarItem2"
+                    android:text="Ruby Sanz" />
             </RelativeLayout>
+            <!--        item3-->
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
 
-            <include
-                layout="@layout/dotted"
-                android:layout_width="match_parent"
-                android:layout_height="2dp" />
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/imgAvatarItem3"
+                    style="@style/circle_image_item">
 
-            <RelativeLayout style="@style/layout_transaction">
-
-                <TextView
-                    android:id="@+id/tranName3"
-                    style="@style/title_transaction"
-                    android:text="Maria Lujan" />
-
-                <TextView
-                    style="@style/sub_title_transaction"
-                    android:layout_below="@id/tranName3"
-                    android:text="Pago aceptado" />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/bitmap_copy_4" />
+                </androidx.cardview.widget.CardView>
 
                 <TextView
-                    style="@style/price_transaction"
-                    android:text="250€"
-                    android:textColor="#00c55b" />
+                    android:id="@+id/tvNameItem3"
+                    style="@style/username_item"
+                    android:layout_below="@id/imgAvatarItem3"
+                    android:text="Mary Rich" />
+            </RelativeLayout>
+            <!--        item4-->
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/imgAvatarItem4"
+                    style="@style/circle_image_item">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/bitmap_copy_5" />
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/tvNameItem4"
+                    style="@style/username_item"
+                    android:layout_below="@id/imgAvatarItem4"
+                    android:text="José Porto" />
             </RelativeLayout>
         </LinearLayout>
-    </androidx.cardview.widget.CardView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/tvActive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_11sdp"
+            android:text="Actividad"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textColor="@color/darkish_blue"
+            app:layout_constraintTop_toBottomOf="@+id/layout_list_user"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ver más movimientos"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/_9sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@+id/layout_list_user"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_130sdp"
+            android:elevation="@dimen/_10sdp"
+            app:cardCornerRadius="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvActive">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="@dimen/_10sdp">
+                <RelativeLayout style="@style/layout_transaction">
+
+                    <TextView
+                        android:id="@+id/tranName1"
+                        style="@style/title_transaction"
+                        android:text="El corte inglés" />
+
+                    <TextView
+                        style="@style/sub_title_transaction"
+                        android:layout_below="@id/tranName1"
+                        android:text="Pago aceptado" />
+
+                    <TextView
+                        style="@style/price_transaction"
+                        android:text="-50€" />
+
+                </RelativeLayout>
+
+                <include
+                    layout="@layout/dotted"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp" />
+
+                <RelativeLayout style="@style/layout_transaction">
+
+                    <TextView
+                        android:id="@+id/tranName2"
+                        style="@style/title_transaction"
+                        android:text="Maria Lujan" />
+
+                    <TextView
+                        style="@style/sub_title_transaction"
+                        android:layout_below="@id/tranName2"
+                        android:text="Pago aceptado" />
+
+                    <TextView
+                        style="@style/price_transaction"
+                        android:text="650€"
+                        android:textColor="#00c55b" />
+                </RelativeLayout>
+
+                <include
+                    layout="@layout/dotted"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp" />
+
+                <RelativeLayout style="@style/layout_transaction">
+
+                    <TextView
+                        android:id="@+id/tranName3"
+                        style="@style/title_transaction"
+                        android:text="Maria Lujan" />
+
+                    <TextView
+                        style="@style/sub_title_transaction"
+                        android:layout_below="@id/tranName3"
+                        android:text="Pago aceptado" />
+
+                    <TextView
+                        style="@style/price_transaction"
+                        android:text="250€"
+                        android:textColor="#00c55b" />
+                </RelativeLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,303 +1,307 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:background="@color/pale_grey">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/v1"
+            style="@style/guide_line_vertical"
+            app:layout_constraintGuide_percent="0.05" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/v1"
-        style="@style/guide_line_vertical"
-        app:layout_constraintGuide_percent="0.05" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/v2"
+            style="@style/guide_line_vertical"
+            app:layout_constraintGuide_percent="0.95" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/v2"
-        style="@style/guide_line_vertical"
-        app:layout_constraintGuide_percent="0.95" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/h1"
+            style="@style/guide_line_horizontal"
+            app:layout_constraintGuide_percent="0.2" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/h1"
-        style="@style/guide_line_horizontal"
-        app:layout_constraintGuide_percent="0.2" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/h2"
+            style="@style/guide_line_horizontal"
+            app:layout_constraintGuide_percent="0.33" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/h2"
-        style="@style/guide_line_horizontal"
-        app:layout_constraintGuide_percent="0.33" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/h3"
+            style="@style/guide_line_horizontal"
+            app:layout_constraintGuide_percent="0.45" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/h3"
-        style="@style/guide_line_horizontal"
-        app:layout_constraintGuide_percent="0.45" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/h4"
+            style="@style/guide_line_horizontal"
+            app:layout_constraintGuide_percent="0.5" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/h4"
-        style="@style/guide_line_horizontal"
-        app:layout_constraintGuide_percent="0.5" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/h5"
+            style="@style/guide_line_horizontal"
+            app:layout_constraintGuide_percent="0.9" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/h5"
-        style="@style/guide_line_horizontal"
-        app:layout_constraintGuide_percent="0.9" />
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:cardCornerRadius="@dimen/_15sdp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toLeftOf="@id/v2"
-        app:layout_constraintTop_toBottomOf="@id/h5">
-
-        <ImageView
+        <androidx.cardview.widget.CardView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/border_cardview"
-            android:padding="@dimen/_5sdp"
-            android:src="@drawable/ic_add_black_18_dp" />
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:elevation="@dimen/_10sdp"
-        app:layout_constraintBottom_toTopOf="@id/h2"
-        app:layout_constraintHeight_default="spread"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/ocean_blue"
-            android:padding="@dimen/_15sdp">
-
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/h01"
-                style="@style/guide_line_horizontal"
-                app:layout_constraintGuide_percent="0.2" />
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/h11"
-                style="@style/guide_line_horizontal"
-                app:layout_constraintGuide_percent="0.6" />
+            app:cardCornerRadius="@dimen/_15sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
 
             <ImageView
-                android:id="@+id/imgBackToHome"
-                android:layout_width="wrap_content"
-                android:layout_height="0dp"
-                android:src="@drawable/ic_back_grey"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toTopOf="@id/h01"
-                />
-
-            <TextView
-                android:id="@+id/Cuentas"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Cuentas bancarias y tarjetas"
-                android:textColor="@color/white"
-                android:textSize="@dimen/_15sdp"
-                app:layout_constraintBottom_toTopOf="@id/message"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/imgBackToHome" />
+                android:background="@drawable/border_cardview"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/ic_add_black_18_dp" />
+        </androidx.cardview.widget.CardView>
 
-            <TextView
-                android:id="@+id/message"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Mantenemos tus datos financieros protegidos para que nadie vea la información confidencial."
-                android:textColor="@color/white"
-                app:layout_constraintBottom_toTopOf="@id/h11"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/Cuentas" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
-
-    <ImageView
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:elevation="@dimen/_15sdp"
-        android:scaleType="fitCenter"
-        android:maxWidth="@dimen/_300sdp"
-        android:src="@drawable/ic_card"
-        app:layout_constraintBottom_toTopOf="@id/h3"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/h1" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Mis tarjetas"
-        android:textColor="@color/blue_black"
-        app:layout_constraintBottom_toTopOf="@id/h4"
-        app:layout_constraintLeft_toRightOf="@id/v1" />
-
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:background="@color/white"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@id/h5"
-        app:layout_constraintLeft_toRightOf="@+id/v1"
-        app:layout_constraintRight_toLeftOf="@id/v2"
-        app:layout_constraintTop_toBottomOf="@id/h4">
-        <!--        item1-->
         <androidx.cardview.widget.CardView
-            style="@style/card_item">
+            android:id="@+id/cardBlue"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_180sdp"
+            android:elevation="@dimen/_10sdp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/h2"
+            app:layout_constraintTop_toTopOf="parent">
 
-            <LinearLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/white_three">
-                <!--            part1-->
-                <RelativeLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1.7">
+                android:background="@color/ocean_blue"
+                android:padding="@dimen/_15sdp">
 
-                    <ImageView
-                        style="@style/card_image"
-                        android:src="@drawable/ic_mastercard_2" />
-                </RelativeLayout>
-                <!--            part2-->
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="2.5"
-                    android:orientation="vertical">
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/h01"
+                    style="@style/guide_line_horizontal"
+                    app:layout_constraintGuide_percent="0.2" />
 
-                    <TextView
-                        android:text="Mastercard"
-                        style="@style/card_name" />
-
-                    <TextView
-                        android:text="****9889"
-                        style="@style/card_number" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="2">
-
-                    <ImageView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:background="@color/darkish_blue"
-                        android:padding="@dimen/_5sdp"
-                        android:src="@drawable/ic_create_black_18_dp_2" />
-
-                    <ImageView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:background="@color/blue"
-                        android:padding="@dimen/_5sdp"
-                        android:src="@drawable/ic_delete_outline_black_18_dp" />
-
-                    <ImageView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:background="@color/bright_blue"
-                        android:padding="@dimen/_10sdp"
-                        android:src="@drawable/ic_path" />
-                </LinearLayout>
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-        <!--        item2-->
-        <androidx.cardview.widget.CardView
-            style="@style/card_item">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <!--            part1-->
-                <RelativeLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1.5">
-
-                    <ImageView
-                        style="@style/card_image"
-                        android:src="@drawable/ic_visa" />
-                </RelativeLayout>
-                <!--            part2-->
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="3"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:text="Visa black"
-                        style="@style/card_name"  />
-
-                    <TextView
-                        android:text="****9889"
-                        style="@style/card_number" />
-                </LinearLayout>
-                <!--            part3-->
-                <RelativeLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerInParent="true"
-                        android:src="@drawable/ic_more_vert_black_18_dp" />
-                </RelativeLayout>
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-        <!--        item3-->
-        <androidx.cardview.widget.CardView
-            style="@style/card_item">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-            <!--            part1-->
-            <RelativeLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1.5">
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/h11"
+                    style="@style/guide_line_horizontal"
+                    app:layout_constraintGuide_percent="0.6" />
 
                 <ImageView
-                    style="@style/card_image"
-                    android:src="@drawable/ic_visa" />
-            </RelativeLayout>
-            <!--            part2-->
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="3"
-                android:orientation="vertical">
+                    android:id="@+id/imgBackToHome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:src="@drawable/ic_back_grey"
+                    app:layout_constraintBottom_toTopOf="@id/h01"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:text="Visa black"
-                    style="@style/card_name" />
-
-                <TextView
-                    android:text="****9889"
-                    style="@style/card_number" />
-            </LinearLayout>
-            <!--            part3-->
-            <RelativeLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1">
-
-                <ImageView
+                    android:id="@+id/Cuentas"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:src="@drawable/ic_more_vert_black_18_dp" />
-            </RelativeLayout>
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-    </LinearLayout>
+                    android:text="Cuentas bancarias y tarjetas"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_15sdp"
+                    app:layout_constraintBottom_toTopOf="@id/message"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/imgBackToHome" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+                <TextView
+                    android:id="@+id/message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mantenemos tus datos financieros protegidos para que nadie vea la información confidencial."
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toTopOf="@id/h11"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/Cuentas" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:id="@+id/cardInfor"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:elevation="@dimen/_15sdp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_card"
+            app:layout_constraintWidth_max="@dimen/_300sdp"
+            app:layout_constraintBottom_toTopOf="@id/h3"
+            app:layout_constraintLeft_toLeftOf="@+id/v1"
+            app:layout_constraintRight_toRightOf="@+id/v2"
+            app:layout_constraintTop_toBottomOf="@id/h1" />
+
+        <TextView
+            android:id="@+id/mis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mis tarjetas"
+            android:textColor="@color/blue_black"
+            app:layout_constraintBottom_toTopOf="@id/h4"
+            app:layout_constraintLeft_toRightOf="@id/v1" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_210sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@color/white"
+            android:orientation="vertical"
+            app:layout_constraintLeft_toRightOf="@+id/v1"
+            app:layout_constraintRight_toLeftOf="@id/v2"
+            app:layout_constraintTop_toBottomOf="@id/mis">
+            <!--        item1-->
+            <androidx.cardview.widget.CardView style="@style/card_item">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white_three">
+                    <!--            part1-->
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.7">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="@dimen/_10sdp"
+                            android:src="@drawable/ic_mastercard_2" />
+                    </RelativeLayout>
+                    <!--            part2-->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2.5"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/card_name"
+                            android:text="Mastercard" />
+
+                        <TextView
+                            style="@style/card_number"
+                            android:text="****9889" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.8">
+
+                        <ImageButton
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/darkish_blue"
+                            android:src="@drawable/ic_create_black_18_dp_2" />
+
+                        <ImageButton
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/blue"
+                            android:src="@drawable/ic_delete_outline_black_18_dp" />
+
+                        <ImageButton
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/bright_blue"
+                            android:src="@drawable/ic_path" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <!--        item2-->
+            <androidx.cardview.widget.CardView style="@style/card_item">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <!--            part1-->
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.5">
+
+                        <ImageView
+                            style="@style/card_image"
+                            android:src="@drawable/ic_visa" />
+                    </RelativeLayout>
+                    <!--            part2-->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/card_name"
+                            android:text="Visa black" />
+
+                        <TextView
+                            style="@style/card_number"
+                            android:text="****9889" />
+                    </LinearLayout>
+                    <!--            part3-->
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ic_more_vert_black_18_dp" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <!--        item3-->
+            <androidx.cardview.widget.CardView style="@style/card_item">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <!--            part1-->
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.5">
+
+                        <ImageView
+                            style="@style/card_image"
+                            android:src="@drawable/ic_visa" />
+                    </RelativeLayout>
+                    <!--            part2-->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/card_name"
+                            android:text="Visa black" />
+
+                        <TextView
+                            style="@style/card_number"
+                            android:text="****9889" />
+                    </LinearLayout>
+                    <!--            part3-->
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ic_more_vert_black_18_dp" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

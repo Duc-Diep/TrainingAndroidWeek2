@@ -134,7 +134,6 @@
     <style name="card_image">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
-        <item name="android:padding">@dimen/_14sdp</item>
-        <item name="android:layout_centerInParent">true</item>
+        <item name="android:padding">@dimen/_15sdp</item>
     </style>
 </resources>
